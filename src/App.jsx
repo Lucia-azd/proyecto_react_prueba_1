@@ -1,13 +1,12 @@
 import './App.css';
 import NavBar from './components/Navbar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import Contador from './components/ItemContador/Contador';
 
 function App() {
   return (
     <div className="App">
       <NavBar/>
-      <ItemListContainer 
-      saludoUsuario="Bienvenidos/as!"/>
+      <Contador stock={5} cantidadInicial={1}/>
     </div>
   );
 };

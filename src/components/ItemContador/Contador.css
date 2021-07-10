@@ -1,0 +1,19 @@
+.Contador h1{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Contador span{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 20px;
+}
+
+.Contador{
+    text-align: center;
+    border: solid 1px black;
+    border-radius: 20px;
+    width: 400px;
+    margin: 40px;
+    padding: 20px;
+}
