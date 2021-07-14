@@ -17,7 +17,6 @@ const Contador = ({stock, cantidadInicial}) => {
 
     return (
         <div className="Contador">
-            <h1>iPhone 12 Pro</h1>
             <button onClick={disminuir}>-</button><span>{cantidadAgregados}</span><button onClick={agregar}>+</button>
         </div>
     );

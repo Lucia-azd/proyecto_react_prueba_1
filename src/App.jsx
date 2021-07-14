@@ -1,12 +1,20 @@
 import './App.css';
+import React from "react";
 import NavBar from './components/Navbar/NavBar';
-import Contador from './components/ItemContador/Contador';
+import ItemListContainer from './components/ItemList/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
 
 function App() {
+
   return (
     <div className="App">
       <NavBar/>
-      <Contador stock={5} cantidadInicial={1}/>
+      <div className="productosContenedor">
+        <ItemListContainer/>
+      </div>
+      <div>
+        <ItemDetailContainer/>
+      </div>
     </div>
   );
 };
