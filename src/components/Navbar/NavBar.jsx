@@ -1,16 +1,39 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 import Carrito from "./CartWidget/CartWidget";
 
 const NavBar = () => {
+
+    const categories = [
+        {
+            id: 1,
+            title: 'iPhone'
+        },
+        {
+            id: 2,
+            title: 'Mac'
+        },
+        {
+            id: 3,
+            title: 'iPad'
+        }
+    ];
+
     return (
         <nav>
-            <h1>iStore</h1>
+            <NavLink to="/" className="h1">
+                iStore
+            </NavLink>
             <div className= "links-nav">
                 <ul>
-                    <li>iPhone</li>
-                    <li>Mac</li>
-                    <li>iPad</li>
+                    {categories.map((cat) => (
+                        <NavLink
+                            to={`/productos/${cat.title}`}
+                            className="links-nav">
+                            {cat.title}
+                        </NavLink>
+                    ))}
                 </ul>
             </div>
             <div>
@@ -21,3 +44,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
+

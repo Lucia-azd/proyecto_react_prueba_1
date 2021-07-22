@@ -3,13 +3,12 @@ import "./ItemDetailStyle.css"
 import Contador from "../ItemContador/Contador"
 
 const ItemDetail = ({ productos }) => {
-
     return (
         <div className="itemsProductos">
-            <img src={productos[0].img} alt="" />
-            <p>{productos[0].nombre}</p>
-            <p>${productos[0].precio}</p>
-            <Contador stock={productos[0].stock} cantidadInicial={1}/>
+            <img src={productos.img} alt="" />
+            <p>{productos.nombre}</p>
+            <p>${productos.precio}</p>
+            <Contador stock={productos.stock} cantidadInicial={1}/>
         </div>
     );
 };

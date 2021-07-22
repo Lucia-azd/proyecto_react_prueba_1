@@ -8,10 +8,11 @@ nav {
     background-color: black;
 }
 
-h1 {
+.h1 {
     color: white;
     font-size: 35px;
     font-family: 'Audiowide', cursive;
+    text-decoration: none;
 }
 
 ul {
@@ -19,13 +20,15 @@ ul {
     justify-content: space-between;
     list-style: none;
     padding: 0;
+}
+
+.links-nav {
+    width: 350px;
     color: rgb(180, 178, 178);
     font-size: 25px;
     font-family: 'Montserrat', sans-serif;
-}
-
-div .links-nav {
-    width: 350px;
+    text-decoration: none;
+    padding: 0 20px;
 }
 
 .carrito-img {

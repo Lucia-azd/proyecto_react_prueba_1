@@ -1,11 +1,11 @@
 .productosContenedor {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 10px 300px;
 }
 
 .itemsProductos{
-    /* border: 1px solid black; */
-    /* padding: 40px; */
     border-radius: 20px;
     text-align: center;
     font-size: 20px;
@@ -13,6 +13,11 @@
     box-shadow: 0px 0px 36px -9px rgba(69,62,62,0.81);
     -webkit-box-shadow: 0px 0px 36px -9px rgba(69,62,62,0.81);
     -moz-box-shadow: 0px 0px 36px -9px rgba(69,62,62,0.81);
+    margin-top: 80px;
+}
+
+.itemsProductos.mac{
+    width: 250px;
 }
 
 .itemsProductos img{
