@@ -12,6 +12,7 @@ function App() {
       <BrowserRouter>
         <NavBar/>
         <Switch>
+          {/* RUTAS */}
           <Route exact path="/">
             <div className="productosContenedor">
               <ItemListContainer/>
