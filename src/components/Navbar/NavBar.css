@@ -35,3 +35,7 @@ ul {
     filter: invert(100%);
     width: 35px;
 }
+
+span {
+    color: white;
+}
