@@ -1,0 +1,65 @@
+footer {
+    background-color: #1c1c1c;
+}
+
+.h1-footer {
+    color: white;
+    font-size: 35px;
+    font-family: 'Audiowide', cursive;
+    text-decoration: none;
+}
+
+footer .contenedor {
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    padding: 5% 0;
+    justify-content: space-around;
+}
+
+footer .contenedor-logo img {
+    width: 100%;
+}
+
+footer .contenedor-logo {
+    padding: 20px 0;
+    width: 150px;
+}
+
+footer .links-footer {
+    display: flex;
+}
+
+footer .titulo-istore, 
+footer .titulo-soporte {
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+
+footer li a {
+    color: #6c757d;
+}
+
+footer li a:hover {
+    color: #5c636a;
+}
+
+footer .redes .titulo-redes {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+footer .redes i {
+    font-size: 25px;
+    padding: 20px;
+    color: #fff;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+}

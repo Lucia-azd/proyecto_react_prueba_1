@@ -5,6 +5,13 @@ import { CartProvider } from './components/CartContext/CartContext';
 import NavBar from './components/Navbar/NavBar';
 import ItemListContainer from './components/ItemList/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
+/* import {
+  Carousel, Jumbotron, Button
+} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css' */
+import CarouselBootstrap from './components/CarouselBootstrap/CarouselBootstrap';
+import Footer from './components/Footer/Footer';
+
 
 function App() {
 
@@ -16,6 +23,7 @@ function App() {
           <Switch>
             {/* RUTAS */}
             <Route exact path="/">
+              <CarouselBootstrap/>
               <div className="productosContenedor">
                 <ItemListContainer/>
               </div>
@@ -33,6 +41,7 @@ function App() {
               </div>
             </Route>
           </Switch>
+          <Footer/>
         </BrowserRouter>
       </CartProvider>
     </div>

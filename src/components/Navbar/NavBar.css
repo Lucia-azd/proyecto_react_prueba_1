@@ -6,6 +6,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     background-color: black;
+    height: 100px;
 }
 
 .h1 {
