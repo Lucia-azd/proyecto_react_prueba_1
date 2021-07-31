@@ -63,3 +63,7 @@ footer ul {
     display: flex;
     flex-direction: column;
 }
+
+footer ul li a {
+    text-decoration: none;
+}

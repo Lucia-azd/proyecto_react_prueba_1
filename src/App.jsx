@@ -11,6 +11,7 @@ import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
 import 'bootstrap/dist/css/bootstrap.min.css' */
 import CarouselBootstrap from './components/CarouselBootstrap/CarouselBootstrap';
 import Footer from './components/Footer/Footer';
+import Cart from './components/Cart/Cart';
 
 
 function App() {
@@ -27,6 +28,10 @@ function App() {
               <div className="productosContenedor">
                 <ItemListContainer/>
               </div>
+            </Route>
+
+            <Route path="/iStore/:section">
+              <Cart/>
             </Route>
 
             <Route path="/productos/:cat">

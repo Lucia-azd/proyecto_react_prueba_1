@@ -8,10 +8,10 @@ import { CartContext } from "../CartContext/CartContext";
 const ItemDetail = ({ producto }) => {
 
     const {addItem, cart} = useContext(CartContext)
-    console.log(cart);
 
     const Addcart = () => {
         addItem({
+            'img': producto.img,
             'nombre': producto.nombre,
             'precio': producto.precio,
             'id': producto.id,
@@ -42,8 +42,8 @@ const ItemDetail = ({ producto }) => {
                     </>
                 ) : (
                     <>
-                        <Link to="/cart" onClick={modifyState}>
-                            <button onClick={modifyState, Addcart}>Terminar Compra</button>
+                        <Link to="/iStore/Cart">
+                            <button onClick={Addcart}>Terminar Compra</button>
                         </Link>
                         <button onClick={modifyState}>Modificar</button>
                     </>
