@@ -49,3 +49,41 @@
     padding: 10px 0;
     font-size: 50px;
 }
+
+.quantity-box {
+    width: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.quantity-box button {
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.quantity-box button.decrease{
+    color: rgb(211, 211, 69);
+    border: rgb(211, 211, 69) 1px solid;
+}
+
+
+.quantity-box button.increase{
+    color: rgb(47, 170, 47);
+    border: rgb(47, 170, 47) 1px solid;
+}
+
+.quantity-box button.decrease:hover{
+    color: white;
+    background-color: rgb(211, 211, 69);
+}
+
+.quantity-box button.increase:hover{
+    color: white;
+    background-color: rgb(47, 170, 47);
+}

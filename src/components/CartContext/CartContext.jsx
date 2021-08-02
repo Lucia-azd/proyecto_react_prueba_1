@@ -1,5 +1,5 @@
 import React, { createContext, useState } from "react";
-import Item from "../ItemList/Item/Item";
+
 
 export const CartContext = createContext()
 
@@ -23,7 +23,6 @@ export const CartProvider = ({children}) => {
         }else{
             setCart([...cart, item])
         }
-        totalCart()
     }
 
     const totalCart = () => {
@@ -32,18 +31,36 @@ export const CartProvider = ({children}) => {
     }
 
     const removeItem = (id) => {
-        setCart(cart.filter(prod => prod.id !== id))
+        let indice = cart.findIndex(product => product.id === id);
+    
+        if ( indice !== -1 ) {
+            cart.splice( indice, 1)
+            setCart([...cart])
+        }
     }
-
 
     const cantidadCart = () => {
         setCantidadProductos(cart.reduce( (acc, prod) => acc + prod.cantidad, 0))
         return cantidadProductos
     }
 
-    console.log(cart);
+    const decreaseProduct = (id) => {
+        let product = cart.find((cartItem) => cartItem.id === id)
+        if (product.cantidad > 1) {
+            product.cantidad -= 1
+        }
+        setCart([...cart])
+    }
 
-    return <CartContext.Provider value={{cart, addItem, cantidadCart, totalCart, removeItem}}>
+    const increaseProduct = (id, stock) => {
+        let product = cart.find((cartItem) => cartItem.id === id)
+        if (product.cantidad < stock) {
+            product.cantidad += 1
+        }
+        setCart([...cart])
+    }
+
+    return <CartContext.Provider value={{cart, addItem, cantidadCart, totalCart, removeItem, increaseProduct, decreaseProduct}}>
         {children}
     </CartContext.Provider>
 

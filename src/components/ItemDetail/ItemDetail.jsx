@@ -15,7 +15,8 @@ const ItemDetail = ({ producto }) => {
             'nombre': producto.nombre,
             'precio': producto.precio,
             'id': producto.id,
-            'cantidad': count
+            'cantidad': count,
+            'stock': producto.stock
         })
     }
 

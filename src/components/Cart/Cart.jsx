@@ -9,19 +9,22 @@ const Cart = () => {
 
     const { section } = useParams();
 
-    const {cart, totalCart, removeItem} = useContext(CartContext)
+    const {cart, totalCart, removeItem, increaseProduct, decreaseProduct} = useContext(CartContext)
 
     console.log(cart);
-
+    
     const productosCart = () => {
         return  cart.map(
             product => (<div className="product-cart">
                 <img src={product.img} alt=""/>
                 <div> <p>{product.nombre}</p> </div>
+                <div className="quantity-box">
+                <button className="decrease" onClick={() => decreaseProduct(product.id)}>-</button>
                 <p>{product.cantidad}</p>
+                <button className="increase" onClick={() => increaseProduct(product.id, product.stock)}>+</button>
+                </div>
                 <p>${product.precio}</p>
-                <button className="eliminar-product">X</button>
-                {/* <button className="eliminar-product" onClick={removeItem(product.id)}>X</button> */}
+                <button className="eliminar-product" onClick={() => removeItem(product.id)}>X</button>
             </div>)
         )
     } 
