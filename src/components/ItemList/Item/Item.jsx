@@ -8,8 +8,8 @@ const Item = ({ producto }) => {
             
                 <div className="itemsProductos mac">
                     <img src={producto.img} alt="" />
-                    <p>{producto.nombre}</p>
-                    <p>${producto.precio}</p>
+                    <p className="name-item">{producto.name}</p>
+                    <p>${producto.price}</p>
                     <Link
                         to={`/producto/${producto.id}`}>
                     <button>Ver Detalles</button>
@@ -20,8 +20,9 @@ const Item = ({ producto }) => {
         return (
                 <div className="itemsProductos">
                     <img src={producto.img} alt="" />
-                    <p>{producto.nombre}</p>
-                    <p>${producto.precio}</p>
+                    <p>{producto.name}</p>
+                    <p style={{fontWeight:"unset", fontSize:"20px"}}>Precio: </p>
+                    <p>${producto.price}</p>
                     <Link
                         to={`/producto/${producto.id}`}>
                     <button>Ver Detalles</button>
@@ -29,7 +30,6 @@ const Item = ({ producto }) => {
                 </div> 
         );
     }
-    
 };
 
 export default Item

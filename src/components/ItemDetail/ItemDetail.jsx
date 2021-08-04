@@ -12,13 +12,15 @@ const ItemDetail = ({ producto }) => {
     const Addcart = () => {
         addItem({
             'img': producto.img,
-            'nombre': producto.nombre,
-            'precio': producto.precio,
+            'name': producto.name,
+            'price': producto.price,
             'id': producto.id,
             'cantidad': count,
             'stock': producto.stock
         })
     }
+
+    console.log(producto);
 
     const [count, setCount] = useState(1);
 
@@ -27,30 +29,47 @@ const ItemDetail = ({ producto }) => {
     const modifyState = () => setFinished(!finished);
 
     return (
-        <div className="itemsProductos">
-            <img src={producto.img} alt="" />
-            <p>{producto.nombre}</p>
-            <p>${producto.precio}</p>
+        <>
+        <div className="itemsProductosDetail">
+            <div className="img-detail"><img src={producto.img} alt="" /></div>
+            
             {!finished ? (
                     <>
-                    <ItemCount
-                        stock={producto.stock}
-                        initial={1}
-                        count={count}
-                        setCount={setCount}
-                    />
-                    <button onClick={modifyState}>Comprar</button>
+                    <div className="detail">
+                        <div>
+                            <p className="name-product">{producto.name}</p>
+                            <p>${producto.price}</p>
+                        </div>
+                        <div className="count-detail">
+                            <ItemCount
+                                stock={producto.stock}
+                                initial={1}
+                                count={count}
+                                setCount={setCount}
+                            />
+                            <button style={{margin: "auto"}} onClick={modifyState}>Comprar</button>
+                        </div>
+                    </div>
                     </>
                 ) : (
-                    <>
+                    <div className="detail">
+                        <div>
+                        <p className="name-product">{producto.name}</p>
+                        <p>${producto.price}</p>
+                        </div>
                         <Link to="/iStore/Cart">
                             <button onClick={Addcart}>Terminar Compra</button>
                         </Link>
                         <button onClick={modifyState}>Modificar</button>
-                    </>
+                    </div>
                 )
             }
         </div>
+        <div className="title-spe"><h2>Especificaciones</h2></div>
+        <div className="spe"><p>{producto.spe}</p></div>
+        <div className="title-info"><h2>Información del Producto</h2></div>
+        <div className="info"><p>{producto.info}</p></div>
+        </>
     );
 };
 

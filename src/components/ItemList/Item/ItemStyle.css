@@ -1,24 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.itemsProductos p{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .productosContenedor {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: 10px 300px;
+    margin: 10px 200px;
 }
 
 .itemsProductos{
     border-radius: 20px;
     text-align: center;
     font-size: 20px;
-    width: 200px;
-    box-shadow: 0px 0px 36px -9px rgba(69,62,62,0.81);
-    -webkit-box-shadow: 0px 0px 36px -9px rgba(69,62,62,0.81);
-    -moz-box-shadow: 0px 0px 36px -9px rgba(69,62,62,0.81);
+    width: 250px;
+    box-shadow: 0px 0px 36px -9px rgba(190, 185, 185, 0.81);
+    -webkit-box-shadow: 0px 0px 36px -9px rgba(190, 185, 185, 0.81);
+    -moz-box-shadow: 0px 0px 36px -9px rgba(190, 185, 185, 0.81);
     margin-top: 80px;
-    height: 450px;
+    height: 550px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    margin-right: 10px;
+}
+
+.itemsProductos:hover {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.39);
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .itemsProductos.mac{
@@ -26,6 +49,20 @@
 }
 
 .itemsProductos img{
-    width: 100%;
+    width: 80%;
+    max-height: 350px;
     border-radius: 20px;
+}
+
+.itemsProductos button{
+    background-color: white;
+    width: 150px;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.itemsProductos button:hover {
+    background-color: black;
+    color: white;
 }
