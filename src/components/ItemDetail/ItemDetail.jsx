@@ -39,6 +39,7 @@ const ItemDetail = ({ producto }) => {
                         <div>
                             <p className="name-product">{producto.name}</p>
                             <p>${producto.price}</p>
+                            <p>stock: {producto.stock > 0 ? (producto.stock) : ("sin stock")}</p>
                         </div>
                         <div className="count-detail">
                             <ItemCount

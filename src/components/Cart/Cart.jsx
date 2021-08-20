@@ -3,6 +3,7 @@ import "./Cart.css"
 import { useParams } from "react-router-dom";
 import { CartContext } from "../CartContext/CartContext";
 import { Link } from "react-router-dom";
+import Form from "../Form/Form";
 
 
 const Cart = () => {
@@ -31,7 +32,7 @@ const Cart = () => {
 
     return (
         <div  className={cart.length == 0 ? ("cart-vacio"): "cart"}>
-            {section === 'Cart' ? ( cart.length > 0 ? ( <div><h1 className="title-cart">Carrito</h1>{productosCart()}<h1>Total: ${totalCart()}</h1></div>): ( <div className="aviso-carrito-vacio"><h1>Tu carrito esta vacio</h1><Link to="/"><h1>¡Seguir comprando!</h1></Link></div>)) : (<></>)
+            {section === 'Cart' ? ( cart.length > 0 ? ( <div><h1 className="title-cart">Carrito</h1>{productosCart()}<h1>Total: ${totalCart()}</h1><div className="contenedor-finalizar-compra"><Link to="/iStore/Form"><button className="boton-finalizar-compra" >Finalizar compra</button></Link></div></div>) : ( <div className="aviso-carrito-vacio"><h1>Tu carrito esta vacio</h1><Link to="/"><h1>¡Seguir comprando!</h1></Link></div>)) : (<><Form/></>)
             }
         </div>
     );

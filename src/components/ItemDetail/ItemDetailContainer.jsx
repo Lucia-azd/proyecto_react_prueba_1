@@ -15,10 +15,10 @@ function ItemDetailContainer() {
     };
 
     useEffect(() => {
-        getArrayProducts().get().then((product) => setProducto(product.docs.find((item) => item.id === idParams).data()))
+        getArrayProducts().get().then((product) => setProducto({...product.docs.find((item) => item.id === idParams).data(), id: idParams}))
     }, [idParams]);
 
-    console.log('detalles: ', producto);
+    console.log('detalles holaaaa: ', producto);
 
     return producto ? (<ItemDetail producto = {producto}/>) : (<Loader/>)
 };

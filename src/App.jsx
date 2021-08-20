@@ -12,6 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css' */
 import CarouselBootstrap from './components/CarouselBootstrap/CarouselBootstrap';
 import Footer from './components/Footer/Footer';
 import Cart from './components/Cart/Cart';
+import FilterProductButtons from './components/ItemList/FilterProductButtons';
 
 
 function App() {

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+.contenedor-compra {
+    margin: 50px 0;
+    text-align: center;
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.firma {
+    font-size: 35px;
+    font-family: 'Audiowide', cursive;
+}
+
+.contenedor-compra span {
+    color: black;
+    font-weight: bold;
+}
+
+.contenedor-compra h2{
+    font-weight: bold;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    /* align-items: center;
+    justify-content: center; */
+    text-align: center;
+    margin: auto;
+    padding: 50px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+form label {
+    margin: 15px 0;
+}
+
+form input {
+    border-radius: 5px;
+    border: 1px solid rgb(197, 197, 197);
+    padding: 5px;
+}
+
+form button {
+    width: 20%;
+    margin: auto;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+form button:hover {
+    background-color: white;
+    color: black;
+} 

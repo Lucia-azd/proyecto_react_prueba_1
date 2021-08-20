@@ -87,3 +87,23 @@
     color: white;
     background-color: rgb(47, 170, 47);
 }
+
+.contenedor-finalizar-compra{
+    display: flex; 
+    justify-content: flex-end; 
+    width: 90%;
+}
+
+.boton-finalizar-compra{
+    margin-bottom: 50px;
+    background-color: white;
+    width: 200px;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.boton-finalizar-compra:hover{
+    background-color: black;
+    color: white;
+}

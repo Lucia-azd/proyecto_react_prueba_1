@@ -19,7 +19,11 @@ export const CartProvider = ({children}) => {
 
     const addItem = (item) => {
         if(isInCart(item.name)){
-            cart.find((cartItem) => cartItem.name === item.name).cantidad += item.cantidad
+            if(item.cantidad + cart.find((cartItem) => cartItem.name === item.name).cantidad <= item.stock){
+                cart.find((cartItem) => cartItem.name === item.name).cantidad += item.cantidad
+            }else{
+                alert("No hay suficiente stock para realizar la compra")
+            }
         }else{
             setCart([...cart, item])
         }
@@ -60,7 +64,11 @@ export const CartProvider = ({children}) => {
         setCart([...cart])
     }
 
-    return <CartContext.Provider value={{cart, addItem, cantidadCart, totalCart, removeItem, increaseProduct, decreaseProduct}}>
+    const clearCart = () => {
+        setCart([])
+    }
+
+    return <CartContext.Provider value={{cart, addItem, cantidadCart, totalCart, removeItem, increaseProduct, decreaseProduct, clearCart}}>
         {children}
     </CartContext.Provider>
 
