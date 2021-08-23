@@ -16,4 +16,4 @@ Proyecto E-commerce de venta de productos Apple
 2. Obtener node_modules (`npm i`)
 3. Abrir con `npm start`
 
-**Ver sitio: ** 
+**Ver sitio: ** https://istore-react.netlify.app/
