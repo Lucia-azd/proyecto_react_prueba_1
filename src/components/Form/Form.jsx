@@ -20,6 +20,7 @@ const Form = () => {
     setEmail(event.target.email.value)
     setName(event.target.name.value)
 
+    /* se guardan los datos del usuario */
     const userData = {
         name: event.target.name.value,
         surname: event.target.surname.value,
@@ -27,6 +28,7 @@ const Form = () => {
         email: event.target.email.value
     };
 
+    /* se genera la orden */
     const newOrder = {
         buyer: userData,
         items: cart,
@@ -34,8 +36,10 @@ const Form = () => {
         total: totalCart()
     };
 
+    /* se llama a la coleccion de firebase */
     const orders = database.collection("orders");
 
+    /* se sube la orden a nuestra base de datos */
     orders
     .add(newOrder)
     .then((response) => {
@@ -45,12 +49,14 @@ const Form = () => {
         alert("ERROR: " + error);
     });
 
+    /* se traen los productos que el usuario va a comprar de la coleccion */
     const itemsToCheck = database.collection("arrayProducts").where(
         firebase.firestore.FieldPath.documentId(),
         "in",
         cart.map((item) => item.id)
     );
 
+    /* Se trae la data de los productos y se verifica si tienen stock, si lo tienen se guarda en el batch la modificacion para restarle stock al producto (y solo se va a ejecutar si hay stock de todos los productos deseados) caso contrario se lo guarda en un array de items sin stock */
     itemsToCheck.get().then((query) => {
         const batch = database.batch();
         
@@ -67,6 +73,7 @@ const Form = () => {
             }
         });
 
+        /* si no hay items sin stock se ejecuta el batch caso contrario se avisa al usuario la falta de stock */
         if (outOfStockItems.length === 0) {
             batch.commit().then(() => {
             clearCart();

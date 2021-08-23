@@ -10,6 +10,7 @@ function InfoOrders() {
 
     const { sectionOrders } = useParams();
 
+    /* se guarda el id que coloco el usuario */
     const handleSubmit = (event) => {
 
         event.preventDefault();
@@ -18,6 +19,7 @@ function InfoOrders() {
         event.target.reset()
     };
 
+    /* se trae la orden de la coleccion que coincida con el id del usuario y la guardamos en el estado order */
     const getOrder = () => {
         database.collection("orders").get().then((product) => setOrder({...product.docs.find((item) => item.id === idCompra).data(), id: idCompra}))
         .catch((error) => {

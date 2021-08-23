@@ -9,6 +9,7 @@ const ItemDetail = ({ producto }) => {
 
     const {addItem} = useContext(CartContext)
 
+    /* agrega al carrito el producto deseado luego de presionar finalizar compra */
     const Addcart = () => {
         addItem({
             'img': producto.img,

@@ -11,7 +11,6 @@ function ItemListContainer() {
     const { cat } = useParams();
 
     const getArrayProducts = () => {
-
         if(cat){       
             return database.collection("arrayProducts").where("categorygeneral", "==", cat)
         }
