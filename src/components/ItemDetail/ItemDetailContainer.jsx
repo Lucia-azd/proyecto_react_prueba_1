@@ -4,6 +4,7 @@ import ItemDetail from "./ItemDetail"
 import { database } from "../../firebase/firebase";
 import Loader from "../Loader/Loader";
 
+
 function ItemDetailContainer() {
 
     const [producto, setProducto] = useState([]);
@@ -18,9 +19,7 @@ function ItemDetailContainer() {
         getArrayProducts().get().then((product) => setProducto({...product.docs.find((item) => item.id === idParams).data(), id: idParams}))
     }, [idParams]);
 
-    console.log('detalles holaaaa: ', producto);
-
-    return producto ? (<ItemDetail producto = {producto}/>) : (<Loader/>)
+    return producto ? (<ItemDetail producto = {producto} key={producto.id}/>) : (<Loader/>)
 };
 
 export default ItemDetailContainer;

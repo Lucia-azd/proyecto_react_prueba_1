@@ -1,5 +1,5 @@
 import {
-    Carousel, Jumbotron, Button
+    Carousel
 } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -10,7 +10,7 @@ const CarouselBootstrap  = (props) => {
                 <img
                     className="d-block w-100"
                     src="/img/banners/banner-iphone-xs.png"
-                    alt="First slide"
+                    alt="banner-iphone-xs"
                 />
                 </Carousel.Item>
 
@@ -18,7 +18,7 @@ const CarouselBootstrap  = (props) => {
                 <img
                     className="d-block w-100"
                     src="/img/banners/banner-iphone-12.png"
-                    alt="Second slide"
+                    alt="banner-iphone-12"
                 />
                 </Carousel.Item>
 
@@ -26,7 +26,7 @@ const CarouselBootstrap  = (props) => {
                 <img
                     className="d-block w-100"
                     src="/img/banners/banner-ipad-air.png"
-                    alt="Third slide"
+                    alt="banner-ipad-air"
                 />
                 </Carousel.Item>
 
@@ -34,7 +34,7 @@ const CarouselBootstrap  = (props) => {
                 <img
                     className="d-block w-100"
                     src="/img/banners/banner-iphone-xr.png"
-                    alt="Third slide"
+                    alt="banner-iphone-xr"
                 />
                 </Carousel.Item>
 
@@ -42,7 +42,7 @@ const CarouselBootstrap  = (props) => {
                 <img
                     className="d-block w-100"
                     src="/img/banners/banner-macpro.png"
-                    alt="Third slide"
+                    alt="banner-macpro"
                 />
                 </Carousel.Item>
         </Carousel>

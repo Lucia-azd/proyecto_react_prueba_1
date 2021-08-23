@@ -7,7 +7,7 @@ import { CartContext } from "../CartContext/CartContext";
 
 const ItemDetail = ({ producto }) => {
 
-    const {addItem, cart} = useContext(CartContext)
+    const {addItem} = useContext(CartContext)
 
     const Addcart = () => {
         addItem({
@@ -20,8 +20,6 @@ const ItemDetail = ({ producto }) => {
         })
     }
 
-    console.log(producto);
-
     const [count, setCount] = useState(1);
 
     const [finished, setFinished] = useState(false);
@@ -31,7 +29,7 @@ const ItemDetail = ({ producto }) => {
     return (
         <>
         <div className="itemsProductosDetail">
-            <div className="img-detail"><img src={producto.img} alt="" /></div>
+            <div className="img-detail"><img src={producto.img} alt={producto.name} /></div>
             
             {!finished ? (
                     <>

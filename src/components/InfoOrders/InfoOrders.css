@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+.info-order {
+    font-family: 'Montserrat', sans-serif;
+    margin: 50px 0;
+}
+
+.info-order h1{
+    text-align: center;
+    border: 1px solid black;
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.info-order span {
+    color: black;
+    font-weight: bold;
+}
+
+.datos-generales {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+    font-size: 20px;
+}
+
+.datos-generales h2 {
+    text-align: center;
+}
+
+.datos-personales h2{
+    margin-bottom: 20px;
+}
+
+.datos-orden {
+    width: 600px;
+}
+
+.datos-generales .datos-orden img {
+    height: 65px;
+}
+
+.datos-orden .datos {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 15px;
+}
+
+.container-total {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container-total button {
+    color: white;
+    background-color: black;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.container-total button:hover {
+    color: black;
+    background-color: white;
+}
+
+.total {
+    text-align: center;
+}

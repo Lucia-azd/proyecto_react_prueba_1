@@ -18,6 +18,7 @@ export const CartProvider = ({children}) => {
     }
 
     const addItem = (item) => {
+        
         if(isInCart(item.name)){
             if(item.cantidad + cart.find((cartItem) => cartItem.name === item.name).cantidad <= item.stock){
                 cart.find((cartItem) => cartItem.name === item.name).cantidad += item.cantidad
@@ -25,7 +26,11 @@ export const CartProvider = ({children}) => {
                 alert("No hay suficiente stock para realizar la compra")
             }
         }else{
-            setCart([...cart, item])
+            if(item.cantidad > item.stock){
+                alert("No hay suficiente stock para realizar la compra")
+            }else{
+                setCart([...cart, item])
+            }
         }
     }
 

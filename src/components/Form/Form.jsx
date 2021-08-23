@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import firebase from "firebase/app";
+import 'firebase/firestore';
 import { database } from "../../firebase/firebase";
 import { useParams, Link } from "react-router-dom";
 import { CartContext } from "../CartContext/CartContext";
@@ -29,7 +30,7 @@ const Form = () => {
     const newOrder = {
         buyer: userData,
         items: cart,
-        date: new Date().toString(),
+        date: firebase.firestore.Timestamp.fromDate(new Date()),
         total: totalCart()
     };
 

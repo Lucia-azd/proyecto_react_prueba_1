@@ -39,3 +39,22 @@ ul {
 span {
     color: white;
 }
+
+nav .container-info-cart {
+    display: flex;
+    align-items: center;
+}
+
+nav .button-orders{
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 30px;
+}
+
+nav .button-orders:hover {
+    color: black;
+    background-color: white;
+}

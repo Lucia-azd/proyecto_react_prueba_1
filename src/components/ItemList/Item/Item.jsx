@@ -7,7 +7,7 @@ const Item = ({ producto }) => {
         return (
             
                 <div className="itemsProductos mac">
-                    <img src={producto.img} alt="" />
+                    <img src={producto.img} alt={producto.name} />
                     <p className="name-item">{producto.name}</p>
                     <p>${producto.price}</p>
                     <Link
@@ -19,7 +19,7 @@ const Item = ({ producto }) => {
     }else{
         return (
                 <div className="itemsProductos">
-                    <img src={producto.img} alt="" />
+                    <img src={producto.img} alt={producto.name} />
                     <p>{producto.name}</p>
                     <p style={{fontWeight:"unset", fontSize:"20px"}}>Precio: </p>
                     <p>${producto.price}</p>

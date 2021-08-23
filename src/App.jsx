@@ -5,14 +5,10 @@ import { CartProvider } from './components/CartContext/CartContext';
 import NavBar from './components/Navbar/NavBar';
 import ItemListContainer from './components/ItemList/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
-/* import {
-  Carousel, Jumbotron, Button
-} from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css' */
 import CarouselBootstrap from './components/CarouselBootstrap/CarouselBootstrap';
 import Footer from './components/Footer/Footer';
 import Cart from './components/Cart/Cart';
-import FilterProductButtons from './components/ItemList/FilterProductButtons';
+import InfoOrders from './components/InfoOrders/InfoOrders';
 
 
 function App() {
@@ -46,6 +42,11 @@ function App() {
                 <ItemDetailContainer/>
               </div>
             </Route>
+
+            <Route path="/:sectionOrders">
+              <InfoOrders/>
+            </Route>
+
           </Switch>
           <Footer/>
         </BrowserRouter>

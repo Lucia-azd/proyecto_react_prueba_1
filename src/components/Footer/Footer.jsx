@@ -14,16 +14,16 @@ const Footer = () => {
                     <div className="links-istore">
                         <ul>
                             <p className="titulo-istore">iStore</p>
-                            <li className="link-istore"><a href="#">¿Quiénes somos?</a></li>
-                            <li className="link-istore"><a href="#">Contacto</a></li>
+                            <li className="link-istore"><Link to="/">¿Quiénes somos?</Link></li>
+                            <li className="link-istore"><Link to="/">Contacto</Link></li>
                         </ul>
                     </div>
                     <div className="links-soporte">
                         <ul>
                             <p className="titulo-soporte">Soporte</p>
-                            <li className="link-soporte"><a href="#">Preguntas frecuentes</a></li>
-                            <li className="link-soporte"><a href="#">Términos y condiciones</a></li>
-                            <li className="link-soporte"><a href="#">Promociones vigentes</a></li>
+                            <li className="link-soporte"><Link to="/">Preguntas frecuentes</Link></li>
+                            <li className="link-soporte"><Link to="/">Términos y condiciones</Link></li>
+                            <li className="link-soporte"><Link to="/">Promociones vigentes</Link></li>
                         </ul>
                     </div>
                 </div>
