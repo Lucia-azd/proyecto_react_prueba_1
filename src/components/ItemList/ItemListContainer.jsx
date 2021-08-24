@@ -10,22 +10,20 @@ function ItemListContainer() {
 
     const { cat } = useParams();
 
-    const getArrayProducts = () => {
-        if(cat){       
-            return database.collection("arrayProducts").where("categorygeneral", "==", cat)
-        }
-        else{
-            return database.collection("arrayProducts")
-        }
-    };
-
     useEffect(() => {
         setTimeout(() => {
-            getArrayProducts().get().then((product) => setProductos(product.docs.map((doc) => {
-                return {...doc.data(), id: doc.id}
-            })));
+            if(cat){
+                database.collection("arrayProducts").where("categorygeneral", "==", cat).get().then((product) => setProductos(product.docs.map((doc) => {
+                    return {...doc.data(), id: doc.id}
+                })));
+            }
+            else{
+                database.collection("arrayProducts").get().then((product) => setProductos(product.docs.map((doc) => {
+                    return {...doc.data(), id: doc.id}
+                })));
+            }
         }, 1500);
-    });
+    }, [cat]);
 
     return productos.length ? (<><ItemList productos = {productos}/></>) : (<Loader/>);
 };

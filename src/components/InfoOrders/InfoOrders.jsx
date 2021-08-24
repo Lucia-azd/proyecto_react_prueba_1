@@ -29,7 +29,7 @@ function InfoOrders() {
     };
 
     useEffect(() => {
-        if(idCompra){
+        if(idCompra !== ''){
             getOrder()
         }
     });
