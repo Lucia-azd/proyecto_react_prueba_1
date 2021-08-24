@@ -67,3 +67,7 @@ footer ul {
 footer ul li a {
     text-decoration: none;
 }
+
+footer .links-istore{
+    margin-right: 30px;
+}
